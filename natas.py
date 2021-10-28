@@ -10,25 +10,25 @@ def natas0():
     return passwd
 natas0()
 
-##def natas1(): #prof's code
-##    url = 'http://natas0:natas0@natas0.natas.labs.overthewire.org/'
-##    resp = requests.get(url)
-##    r = "The password for natas\d+ is (\w{32})"
-##    passwd = re.findall(r,resp.text)[0]
-##    print(f"The password for level 1 is:{passwd}")
-##    print(resp.status_code)
-##    return passwd
-##passLvl1 = natas1()
-##
-##def natas2(passLvl1): #prof's code
-##    url = f'http://natas1:{passLvl1}@natas1.natas.labs.overthewire.org/'
-##    resp = requests.get(url)
-##    r = "The password for natas\d+ is (\w{32})"
-##    passwd = re.findall(r,resp.text)[0]
-##    print(f"The password for level 2 is:{passwd}")
-##    print(resp.status_code)
-##    return passwd
-##natas2(passLvl1)
+def natas1(): #prof
+    url = 'http://natas0:natas0@natas0.natas.labs.overthewire.org/'
+    resp = requests.get(url)
+    r = "The password for natas\d+ is (\w{32})"
+    passwd = re.findall(r,resp.text)[0]
+    print(f"The password for level 1 is:{passwd}")
+    print(resp.status_code)
+    return passwd
+passLvl1 = natas1()
+
+def natas2(passLvl1): #prof
+    url = f'http://natas1:{passLvl1}@natas1.natas.labs.overthewire.org/'
+    resp = requests.get(url)
+    r = "The password for natas\d+ is (\w{32})"
+    passwd = re.findall(r,resp.text)[0]
+    print(f"The password for level 2 is:{passwd}")
+    print(resp.status_code)
+    return passwd
+natas2(passLvl1)
 
 passLvl3 = 'sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14' # we didn't have to do 3.
 def natas4(passLvl3):
